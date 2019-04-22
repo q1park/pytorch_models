@@ -3,6 +3,36 @@ import numpy as np
 from torch import nn, optim
 from torch.autograd import Variable
 
+def view_probability(model, test_set, test_ind, version):
+    model.eval()
+
+    images, labels = iter(torch.utils.data.DataLoader(test_set[test_ind], batch_size=1) )
+
+    img = images.view(images.shape[0], -1)
+    img = img
+    
+    with torch.no_grad():
+        pshape = torch.exp(model.forward(img) );
+
+    return helper.view_classify(images[0], pshape, version = version);
+
+def make_checkpoint(model, check_name):
+    checkpoint = {'input_size': model.hidden_layers[0].in_features,
+                  'output_size': model.output.out_features,
+                  'hidden_layers': [each.out_features for each in model.hidden_layers],
+                  'state_dict': model.state_dict()}
+
+    
+    torch.save(checkpoint, check_name)
+
+def load_checkpoint(filepath):
+    checkpoint = torch.load(filepath)
+    model = Network(checkpoint['input_size'],
+                             checkpoint['output_size'],
+                             checkpoint['hidden_layers'])
+    model.load_state_dict(checkpoint['state_dict'])
+    
+    return model
 
 def test_network(net, trainloader):
 
