@@ -1,4 +1,4 @@
-# Convolutional Networks in PyTorch
+# Tensorflow models that are not totally deprecated
 
 With all of the insanity going on due to the merging of Keras and Tensorflow, I thought it would be nice to provide several examples of ways to build models that satisfy the following requirements:
 
