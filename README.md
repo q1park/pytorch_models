@@ -11,8 +11,11 @@ With all of the insanity going on due to the merging of Keras and Tensorflow, I 
 Each example has an increasing level of customizability:
 
 flowers-tf-kerasgeneric.ipynb - Simplest example of a sequential ConvNet using model.fit
+
 flowers-tf-kerascustom.ipynb - Subclassing tf.keras.Model for increased flexibility
+
 flowers-tf-kerasfree.ipynb - Building models from scratch with minimal reliance on API's
+
 flowers-torch.ipynb - Equivalent example using PyTorch
 
 The following module gives an example of how to load data into Tensorflow models using tf.data.Dataset or just purely with numpy arrays
