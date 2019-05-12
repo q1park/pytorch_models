@@ -1,4 +1,6 @@
-# Tensorflow models that are not totally deprecated
+# Examples of model building methods in tensorflow versus pytorch using convolutional networks
+
+PyTorch models are relatively straightforward (imho).
 
 With all of the insanity going on due to the merging of Keras and Tensorflow, I thought it would be nice to provide several examples of ways to build models that satisfy the following requirements:
 
