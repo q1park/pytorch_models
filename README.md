@@ -1,8 +1,4 @@
-# Examples of model building methods in tensorflow versus pytorch using convolutional networks
-
-PyTorch models are relatively straightforward (imho)
-
-flowers-torch.ipynb - Simple example of a PyTorch convolutional network
+# Convolutional networks in tensorflow
 
 With all of the insanity going on due to the merging of Keras and Tensorflow, I thought it would be nice to provide several examples of ways to build models that satisfy the following requirements:
 
