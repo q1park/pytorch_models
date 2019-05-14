@@ -23,4 +23,3 @@ imageloader.py
 Other random stuff:
 
 batchtest.ipynb - Time/memory tests for various batching procedures
-visuals-cv2.ipynb - Some simple examples of visualization and custom filter creation using OpenCV
